@@ -70,15 +70,3 @@ document.write(array[6][5]);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
