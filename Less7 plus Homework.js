@@ -34,6 +34,7 @@ document.write(arr);*/
 var arr = [1,2,3]
 var a = arr.concat (4,5,6, ["banana",7]);
 document.write(a);
+console.log();
 */
 
 
