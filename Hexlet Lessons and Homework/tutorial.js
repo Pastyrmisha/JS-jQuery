@@ -27,5 +27,5 @@ const makeItFunny = (text, char) => {
 return textCopy;
 }
 const text = 'I never look back';
-// Каждый третий элемент ----
+// Каждый третий элемент
 console.log(makeItFunny(text, 3)); // "I NevEr LooK bAck"
