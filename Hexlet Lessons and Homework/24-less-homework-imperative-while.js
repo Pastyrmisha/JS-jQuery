@@ -1,14 +1,17 @@
 const smallestDivisor = (n) => {
-    let counter = 1;
+    let counter = 2;
     let result = 1;
+  
     if (n < 1) {
-      return Nan;
+      return NaN;
     }
-    
-    while (counter <= n) {
+    if (n === 1) {
+      return result;
+    }
+    while (n % counter !== 0) {
       result = n / counter;
       counter = counter + 1;
     }
-    return result;
-  }
-  console.log(smallestDivisor(15));
+    return counter;
+  };
+console.log(smallestDivisor(15));
