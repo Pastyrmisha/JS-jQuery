@@ -1,32 +1,46 @@
 const length = (str) => str.length;
 
-let num = 598997686567;
 
-const numSummary = (num) => {
-    num = String(num);
-    let result = 0;
-    let i = 0;
-
-    while (i < length(num)) {
-        result += Number(num[i]);
+const finishSummary = (num) => {
+    const numSummary = () => {
+      const str = String(num);
+      let result = 0;
+      let i = 0;
+  
+      while (i < length(str)) {
+        result += Number(str[i]);
         i += 1;
+      }
+      return result;
+    };
+    while (length(String(numSummary(num))) > 1) {
+      num = numSummary(num);
     }
-    return result;
-};
+    return numSummary(num);
+  };
+  export default finishSummary;
 
+  
 
-let finishNumSummary = numSummary(num);
+// Teacher:
 
-
-
-if (length(String(finishNumSummary)) > 1) {
-  num = numSummary(num);
-
-}
-
-
-console.log(numSummary(num));
-
-
-
-
+//   const sumDigits = (num) => {
+//     const str = String(num);
+//     let result = 0;
+//     for (let i = 0; i < length(str); i += 1) {
+//       result += Number(str[i]);
+//     }
+  
+//     return result;
+//   };
+  
+//   const addDigits = (num) => {
+//     let result = num;
+//     while (result >= 10) {
+//       result = sumDigits(result);
+//     }
+  
+//     return result;
+//   };
+  
+//   export default addDigits;
