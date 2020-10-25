@@ -19,47 +19,49 @@
 // console.log(rev('Hello!'));
 
 
-const mod = (text) => {
-    text = prompt('Введите Ваши данные');
+
+// function hello|world|word => Hello
+//                              World
+//                              Word
+
+// const mod = (text) => {
+//     text = prompt('Введите Ваши данные');
+//     if (text === '' || text === null || text.indexOf('|') == -1) {
+//         return mod();
+//     }
+//     if (text.lastIndexOf('|') === text.length - 1) {
+//         text = text.substring(0, text.length - 1);
+//     }
+//     let res = '';
+//     for (let j = 0; j < text.length; j += 1) {
+//         if (text[j - 1] === '|' || j === 0) {
+//             res += text[j].toUpperCase();
+//         }else{
+//             res += text[j];
+//         }
+//     }
+//     res = res.split('|')
+//     let result = '';
+//     for (let i = 0; i < res.length; i += 1) {
+//         result += `${res[i]}</br>`;
+//     }
     
-if (text === '' || text === null) {
-    return mod();
-} 
-
-let res = '';
-
-for (let j = 0; j < text.length; j += 1) {
-    if (text[j - 1] === '|' || j === 0) {
-    res += text[j].toUpperCase();
-
-    }else {
-    res += text[j].toUpperCase();
-}
-}
-console.log(res);
-
-text = text.split('|')
+//     return document.write(result);
+// };
+// mod();
 
 
+// variation
 
+ let text = prompt('Введите Ваши данные');
 
+ while (!text || text == null || text.indexOf('|') == -1);
 
+    if (text.lastIndexOf('|') === text.length - 1) {
+        text = text.substring(0, text.lastIndexOf('|'));
+    }
+let result = text.split('|');
 
-
-
-let result = '';
-
-for (let i = 0; i < text.length; i += 1) {
-
-
-    result += `${text[i]}</br>`;
-
-
-}
-
-return document.write(result);
-
-
-};
-mod();
-
+    for (let i = 0; i < result.length; i += 1) {
+        document.write(result[i] + '</br>');
+    } 
