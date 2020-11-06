@@ -32,4 +32,4 @@ const convertText = (sentence) => {
       ? sentence.split("").reverse().join("")
       : sentence;
   };
-  console.log(convertText("hey"));
+  console.log(convertText("heyyou"));
