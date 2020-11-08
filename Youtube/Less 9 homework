@@ -1,0 +1,14 @@
+
+//factorial
+
+const factorial = (n) => {
+ if (n === 0) {
+return 1;
+}
+
+const result = n * factorial(n - 1);
+
+return result;
+};
+
+document.write(factorial(5));
