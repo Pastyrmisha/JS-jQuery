@@ -12,3 +12,5 @@ return result;
 };
 
 document.write(factorial(5));
+
+
