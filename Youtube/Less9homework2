@@ -1,0 +1,19 @@
+// greatest number
+
+const moreThan = () => {
+
+let maxNumber = 0;
+
+for(i = 0; i < arguments.length; i ++) {
+if(arguments[i] > maxNumber) {
+
+maxNumber = arguments[i];
+
+ }
+}
+return maxNumber;
+
+
+};
+
+document.write(moreThan(1,2,4,500,7,8,2000));
